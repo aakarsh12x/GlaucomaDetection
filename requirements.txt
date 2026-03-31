@@ -1,0 +1,7 @@
+ultralytics
+gradio
+opencv-python-headless
+matplotlib
+Pillow
+datasets
+huggingface_hub
