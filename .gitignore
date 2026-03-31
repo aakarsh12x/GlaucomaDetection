@@ -1,0 +1,8 @@
+yolo_dataset/
+runs/
+*.pt
+__pycache__/
+.venv/
+.env
+.ipynb_checkpoints/
+Glaucoma_Detection_Model/
