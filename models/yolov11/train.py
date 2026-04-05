@@ -27,7 +27,7 @@ def train_glaucoma_yolo11(data_path="dataset", epochs=20, imgsz=224):
         batch=16,
         project='glaucoma_runs',
         name='yolo11_glaucoma_classification',
-        device='cpu' # Set to 'cuda' or 'mps' if you have GPU acceleration
+        device=0 # Use NVIDIA GPU (CUDA 0)
     )
     
     print("\nTraining complete! Your weights are saved inside the 'glaucoma_runs' directory.")
@@ -35,7 +35,7 @@ def train_glaucoma_yolo11(data_path="dataset", epochs=20, imgsz=224):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Train YOLOv11 for Glaucoma Classification.")
-    parser.add_argument("--data", default="../yolo_dataset", help="Path to your formatted dataset root.")
+    parser.add_argument("--data", default="../../yolo_dataset", help="Path to your formatted dataset root.")
     parser.add_argument("--epochs", type=int, default=10, help="Number of epochs to train for.")
     parser.add_argument("--imgsz", type=int, default=224, help="Image size for training and validation.")
     

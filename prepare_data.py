@@ -3,7 +3,7 @@ from datasets import load_dataset
 from PIL import Image
 from tqdm import tqdm
 
-def prepare_glaucoma_dataset(download_dir="yolo_dataset", max_samples_per_split=1000):
+def prepare_glaucoma_dataset(download_dir="yolo_dataset", max_samples_per_split=5000):
     """
     Downloads a public eye disease dataset from Hugging Face using STREAMING 
     to avoid pulling gigabytes of unused data, and prepares it for YOLO.
