@@ -83,7 +83,7 @@ def train_mambaout(data_dir="../../yolo_dataset", epochs=30, batch_size=16, lr=1
     num_classes = len(train_dataset.classes)
     model = GlaucomaMambaOut(num_classes=num_classes).to(device)
     
-    optimizer = optim.Adam(model.parameters(), lr=lr)
+    optimizer = optim.AdamW(model.parameters(), lr=lr)
     criterion = nn.CrossEntropyLoss()
 
     for epoch in range(epochs):
